@@ -12,21 +12,19 @@ import { NavigationContainer } from '@react-navigation/native';
 
 function AyudaScreen( {navigation}) {
     return (
-      <View style={{ flex: .5,}}>
+      <View >
         <TouchableOpacity  > 
           <Text style={styles.textoAyuda} >¿Como funciona la Aplicación Radio y Televisión de Hidalgo? </Text>
         </TouchableOpacity>
-  
-        <TouchableOpacity>
-          <Text style={styles.textoAyuda}>¿Cómo seleccionar una estación de radio?
-          {"\n"}
-          __________________________________________________</Text>
+      <View  style={styles.linea} /> 
+        <TouchableOpacity >
+          <Text style={styles.textoAyuda}>¿Cómo seleccionar una estación de radio? </Text>
         </TouchableOpacity>
+        <View  style={styles.linea} /> 
         <TouchableOpacity>
-          <Text style={styles.textoAyuda}>¿Cómo seleccionar una estacion de televisión?
-          {"\n"}
-          __________________________________________________</Text>
+          <Text style={styles.textoAyuda}>¿Cómo seleccionar una estacion de televisión?</Text>
         </TouchableOpacity>
+        <View  style={styles.linea} /> 
       </View>
     );
   }
@@ -53,12 +51,17 @@ function AyudaScreen( {navigation}) {
  
 const styles = StyleSheet.create({
     textoAyuda: {
-        color: '#130f40',
+        color: 'green',
         padding: 10,
+        marginTop: 10,
         fontSize: 15,
         fontWeight: 'bold',
         
       },
+      linea: {
+       borderBottomColor: 'blue',
+        borderBottomWidth: 1,
+      }
   });
 
   export default AyudaScreen;
