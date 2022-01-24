@@ -1,0 +1,31 @@
+1.-
+npm install @react-navigation/native
+
+2.-
+npm install react-native-screens react-native-safe-area-context
+
+3.-
+npm install @react-navigation/drawer
+
+4.-
+
+npm i react-native-gesture-handler@2.1.0 react-native-reanimated
+
+
+si marca el siguiente error :
+
+Reanimated 2 failed to create a worklet, maybe you forgot to add Reanimated's babel plugin?
+
+ir a  Babel.config.js  y remplazar el codigo que tiene por este
+
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+
+  // add the below line 
+  plugins: ['react-native-reanimated/plugin'], 
+ // this should be always last line
+};
+
+y ya debe de jalar, sino tambien lipiar el cache 
+
+link de referencia https://stackoverflow-com.translate.goog/questions/67130651/reanimated-2-failed-to-create-a-worklet-maybe-you-forgot-to-add-reanimateds-ba?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=op,sc
